@@ -6,7 +6,7 @@ namespace HardCoded.VRigUnity {
 	public abstract class Solution : MonoBehaviour {
 		protected virtual string TAG => GetType().Name;
 		[SerializeField] protected HolisticGraph graphRunner;
-    public RawImage previewImage;
+        public RawImage previewImage;
 		
 		private Coroutine runtimeCoroutine;
 		private ImageSource imageSource;
@@ -15,9 +15,9 @@ namespace HardCoded.VRigUnity {
 		public bool IsPaused { get; private set; } = true;
 
 		protected IEnumerator Start() {
-      // Use VideoFileSource instead
-      // imageSource = GetComponent<WebCamSource>();
-      imageSource = GetComponent<VideoFileSource>();
+          // Use VideoFileSource instead
+          // imageSource = GetComponent<WebCamSource>();
+          imageSource = GetComponent<VideoFileSource>();
 			bootstrap = GetComponent<Bootstrap>();
 			bootstrap.enabled = true;
 
@@ -80,7 +80,7 @@ namespace HardCoded.VRigUnity {
 				if (texture2D == null || texture2D.width != tex.width || texture2D.height != tex.height) {
 					texture2D = new Texture2D(tex.width, tex.height, TextureFormat.RGBA32, false);
 				}
-        previewImage.texture = texture2D; // for debugging
+                previewImage.texture = texture2D; // for debugging
 				Graphics.CopyTexture(tex, texture2D);
 				graphRunner.AddTextureFrameToInputStream(texture2D);
 				

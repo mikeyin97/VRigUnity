@@ -16,7 +16,7 @@ namespace HardCoded.VRigUnity {
 
 		protected IEnumerator Start() {
       // Use VideoFileSource instead
-			// imageSource = GetComponent<WebCamSource>();
+      // imageSource = GetComponent<WebCamSource>();
       imageSource = GetComponent<VideoFileSource>();
 			bootstrap = GetComponent<Bootstrap>();
 			bootstrap.enabled = true;
